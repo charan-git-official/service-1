@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'feature']], userRemoteConfigs: [[url: 'https://github.com/charan-git-official/miniature-spork-1.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/charan-git-official/service-1']]])
             }
         }
         
