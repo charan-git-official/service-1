@@ -19,14 +19,5 @@ pipeline {
                 bat 'docker build -t service-1 .'
             }
         }
-        
-        stage('Push Docker image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'sricharanp', passwordVariable: '14KT1a@0371')]) {
-                    bat 'docker login -u $sricharanp -p $14KT1a@0371'
-                    bat 'docker push service-1'
-                }
-            }
-        }
     }
 }
